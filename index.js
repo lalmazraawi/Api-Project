@@ -1,12 +1,15 @@
 const express = require ('express')
+const Cats = require ('./cats' )
 
 const app = express ()
 
 app.set ('view engine', 'pug')
 
-app.get('/', (request, response) => {
-    response.render ('index', {title: 'Cats Database'})
+app.use(express.static('public'))
 
+app.get('/', (request, response) => {
+    response.render ('index', {})
+   
 })
 
 app.all('*', (request, response)=> {

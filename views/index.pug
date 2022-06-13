@@ -1,3 +1,49 @@
-html 
+html  
+    head
+       link(rel="stylesheet" href="/css/style.css")
     body 
-        h1= title
+        
+        h1 Cat API Documentation 
+        a Because everyday is Cat-urday
+        p A list of the available routes for this API and their function 
+        div
+            h2 GET '/cats'
+            p This GET route will return a list of all available cats in the database 
+            p Route: http://localhost:1338/cats
+            p Expected Output: id:1, breed: Bengal Cat, age: Kitten, hair: Short
+
+        div
+            h2 GET '/cats/:id'
+            p This GET route will return a list of all cats by id
+            p Route: http://localhost:1338/cats/:id
+            p Expected Output: id:2, breed: Tabby, age: Adult, hair: Short
+
+        div
+            h2 GET '/cats/:breed'
+            p This GET route will return a list of all cats by breed
+            p Route: http://localhost:1338/cats/:breed
+            p Expected Output: id:3, breed: Persian Cat, age: Junior, hair: Long
+
+        div
+            h2 GET '/cats/:age
+            p This GET route will return a list of all cats by age
+            p Route: http://localhost:1338/cats/:age
+            p Expected Output: id:4, breed: Siamese Cat, age: Kitten, hair: Short
+
+        div
+            h2 GET '/cats/:hair'
+            p This GET route will return a list of all cats by hair
+            p Route: http://localhost:1338/cats/:hair
+            p Expected Output: id:1, breed: Bengal Cat, age: Kitten, hair: Short
+
+        div
+            h2 POST '/cats'
+            p This POST route will add a new cat including id, breed, age and hair
+            p Route: http://localhost:1338/cats/
+            p Expected Output: [{}]
+
+        div
+            h2 DELETE'/cats'
+            p This DELETE route will delete a cat including id, breed, age and hair
+            p Route: http://localhost:1338/cats
+            p Expected Output: id:1, breed: Bengal Cat, age: Kitten, hair: Short
